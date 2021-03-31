@@ -1,0 +1,64 @@
+#!/bin/sh
+# installer awk elinks
+DATE=`date -d "19791227" +%Y%m%d`
+Date_du_jour=`date  +%Y%m%d`
+
+URL="https://raw.githubusercontent.com/ecolinux74/vtrade/main/EURUSD"
+URL0="https://fr.investing.com/currencies/eur-usd-historical-data"
+opts="-dump -no-references -no-numbering -dump-width 9999"
+
+workdir="$HOME/.vtrade/"
+tmpdir="/tmp/vtrade"
+
+mkdir -p ${workdir}
+mkdir -p ${tmpdir}
+
+data_file="${workdir}/EURUSD"
+
+[[ ! -e ${datafile} ]] && wget -q ${URL} -O ${data_file}
+
+if [ -e ${datafile} ] ; then
+	LAST=`stat -c %z ${data_file} | cut -d ' ' -f1 | sed 's/-//g'`
+fi
+
+if [ ${Date_du_jour} -gt ${LAST} ] ; then
+	rm ${data_file}
+	wget -q ${URL} -O ${data_file}
+fi 
+
+exit
+cp ${data_file} ${tmpdir}/EURUSD.data
+
+elinks ${opts} ${URL0} | grep -E "[0-3][0-9]/[0-1][0-9]/20.*%$" \
+	| sed 's/%$//;s/  */ /g;s/^ *//;s/[.]//g;s/,/./g' | sed 's| |/|' \
+	| awk -F "/" '{print $3$2$1" "$4}' \
+	| awk '{print $1" "$2" "$3" "$4" "$5}' \
+	| sort > ${tmpdir}/EURUSD.hist
+
+HIST_DATE=`head -1 ${tmpdir}/EURUSD.hist | cut -d ' ' -f1 \
+	| awk -F '/' '{print $3$2$1}'`
+
+DATA_DATE=`tail -1 ${tmpdir}/EURUSD.data | cut -d ' ' -f1 \
+	| awk -F '/' '{print $3$2$1}'`
+
+D1=`head -1 ${tmpdir}/EURUSD.hist | cut -d ' ' -f1`
+D2=`tail -1 ${tmpdir}/EURUSD.hist | cut -d ' ' -f1`
+
+echo -e '\c' > ${tmpdir}/tmp
+
+while [[ ${D1} -le ${Date_du_jour} ]] ; do
+
+	DATAS=`grep "$D1" ${tmpdir}/EURUSD.hist \
+		| awk '{print $2" "$3" "$4" "$5}'`
+	
+	[[ -n "$DATAS" ]] && echo ${DATAS} > ${tmpdir}/tmp
+	[[ -z "$DATAS" ]] && DATAS=`cat ${tmpdir}/tmp`
+	
+	echo $D1 $DATAS >> ${tmpdir}/EURUSD.hist1
+	
+	D1=`date -d "${D1}+1 day" +%Y%m%d`
+	
+done
+mv ${tmpdir}/EURUSD.hist1 ${tmpdir}/EURUSD.hist
+cat ${tmpdir}/EURUSD.data ${tmpdir}/EURUSD.hist \
+	| sort -u | sed "$ d" > ${data_file}
