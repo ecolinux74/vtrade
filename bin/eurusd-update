@@ -26,7 +26,6 @@ if [ ${Date_du_jour} -gt ${LAST} ] ; then
 	wget -q ${URL} -O ${data_file}
 fi 
 
-exit
 cp ${data_file} ${tmpdir}/EURUSD.data
 
 elinks ${opts} ${URL0} | grep -E "[0-3][0-9]/[0-1][0-9]/20.*%$" \
@@ -62,3 +61,5 @@ done
 mv ${tmpdir}/EURUSD.hist1 ${tmpdir}/EURUSD.hist
 cat ${tmpdir}/EURUSD.data ${tmpdir}/EURUSD.hist \
 	| sort -u | sed "$ d" > ${data_file}
+	
+cat ${data_file} 

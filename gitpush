@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check ssh connection
+ssh-add -l &>/dev/null
+[[ "$?" == 2 ]] && eval `ssh-agent`
+ssh-add -l &>/dev/null
+[[ "$?" == 1 ]] && expect $HOME/.ssh/agent
+
+# Send git commands to push
+git add . && git commit -m "your commit" && git push -u origin master
