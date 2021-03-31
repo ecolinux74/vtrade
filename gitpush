@@ -7,4 +7,4 @@ ssh-add -l &>/dev/null
 [[ "$?" == 1 ]] && expect $HOME/.ssh/agent
 
 # Send git commands to push
-git add . && git commit -m "your commit" && git push -u origin master
+git add . && git commit -m "your commit" && git push -u origin main
