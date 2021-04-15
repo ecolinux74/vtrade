@@ -4,14 +4,14 @@
 	"T": "Europe<br>fdfdsfs",
 	"D": "Englobe toutes les question relatives à l'Europe",
 	"M": ["https://www.economie.gouv.fr/files/styles/image_contenu_article_espace/public/files/directions_services/cedef/images_fichespratiques/europe.jpg?itok=9BHFzoKi", "https://learnwebcode.github.io/json-example/images/cat-1.jpg"]
-}
+},
 {
 	"ID": "1",
 	"C": ["2px", "solid", "red", "#fff"],
 	"T": "Santé",
 	"D": "Englobe toutes les questions relatives à la santé",
 	"M": ["https://i0.wp.com/www.cgt-ratp.fr/wp-content/uploads/2018/04/Logo-Protec-SANTE.png?w=649&ssl=1"]
-}
+},
 {
 	"ID": "2",
 	"C": ["2px", "solid", "green", "#fff"],
