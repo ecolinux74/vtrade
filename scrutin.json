@@ -1,21 +1,21 @@
   {
 	"id" : "0",
-	"cx" : "2px", 
-	"tx" : "Europe<br>fdfdsfs",
-	"dx" : "Englobe toutes les question relatives à l'Europe",
-	"mx" : "https"
+	"width" : "2px", 
+	"title" : "Europe<br>fdfdsfs",
+	"desc" : "Englobe toutes les question relatives à l'Europe",
+	"urls" : "https"
 },
 {
 	"id" : [1, , ],
-	"c" : ["2px", "solid", "red", "#fff"],
-	"t" : "Santé",
-	"d" : "Englobe toutes les questions relatives à la santé",
-	"m" : ["https://i0.wp.com/www.cgt-ratp.fr/wp-content/uploads/2018/04/Logo-Protec-SANTE.png?w=649&ssl=1"]
+	"width" : ["2px", "solid", "red", "#fff"],
+	"title" : "Santé",
+	"desc" : "Englobe toutes les questions relatives à la santé",
+	"urls" : ["https://i0.wp.com/www.cgt-ratp.fr/wp-content/uploads/2018/04/Logo-Protec-SANTE.png?w=649&ssl=1"]
 },
 {
 	"id" : [1, , ],
-	"c" : ["2px", "solid", "green", "#fff"],
-	"t" : "Santé",
-	"d" : "",
-	"m" : [""]
+	"width" : ["2px", "solid", "green", "#fff"],
+	"title" : "Santé",
+	"desc" : "",
+	"urls" : [""]
 }
