@@ -3,19 +3,19 @@
 		"c": "2px", 
 		"t": "Europe<br>fdfdsfs",
 		"d": "Englobe toutes les question relatives à l'Europe",
-		"m": "https://www.economie.gouv.fr/files/styles/image_contenu_article_espace/public/files/directions_services/cedef/images_fichespratiques/europe.jpg?itok=9BHFzoKi"
+		"m": "https://www.economie.gouv.fr/files/styles/image_contenu_article_espace/public/files/directions_services/cedef/images_fichespratiques/europe.jpg?itok=9BHFzoKi",
 	},
 	{
 		"id": "1",
 		"c": "2px",
 		"t": "Santé",
 		"d": "Englobe toutes les questions relatives à la santé",
-		"m": "https://i0.wp.com/www.cgt-ratp.fr/wp-content/uploads/2018/04/Logo-Protec-SANTE.png?w=649&ssl=1"
+		"m": "https://i0.wp.com/www.cgt-ratp.fr/wp-content/uploads/2018/04/Logo-Protec-SANTE.png?w=649&ssl=1",
 	},
 	{
 		"id": "2",
 		"c": "2px",
 		"t": "Santé",
 		"d": "x",
-		"m": "x"
+		"m": "x",
 	}
