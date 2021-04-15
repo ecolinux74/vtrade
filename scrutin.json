@@ -4,7 +4,7 @@
 	"tx" : "Europe<br>fdfdsfs",
 	"dx" : "Englobe toutes les question relatives à l'Europe",
 	"mx" : ["https://www.economie.gouv.fr/files/styles/image_contenu_article_espace/public/files/directions_services/cedef/images_fichespratiques/europe.jpg?itok=9BHFzoKi", "https://learnwebcode.github.io/json-example/images/cat-1.jpg"]
-},
+}
 {
 	"id" : [1, , ],
 	"c" : ["2px", "solid", "red", "#fff"],
