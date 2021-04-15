@@ -1,9 +1,9 @@
   {
 	"id" : "0",
-	"width" : "2px", 
-	"title" : "Europe<br>fdfdsfs",
-	"desc" : "Englobe toutes les question relatives à l'Europe",
-	"urls" : "https"
+	"name" : "2px", 
+	"fistname" : "Europe<br>fdfdsfs",
+	"lastname" : "Englobe toutes les question relatives à l'Europe",
+	"gender" : "https"
 },
 {
 	"id" : [1, , ],
