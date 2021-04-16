@@ -1,7 +1,7 @@
 {
-	I : "0",
-	C : ["2px","solid","blue","#fff"], 
-	T : "Europe<br>fdfdsfs",
-	D : "Englobe toutes les question relatives à l'Europe",
-	M : ["https://www.economie.gouv.fr/files/styles/image_contenu_article_espace/public/files/directions_services/cedef/images_fichespratiques/europe.jpg?itok=9BHFzoKi","https://learnwebcode.github.io/json-example/images/cat-1.jpg"]
+	"I" : "0",
+	"C" : ["2px","solid","blue","#fff"], 
+	"T" : "Europe<br>fdfdsfs",
+	"D" : "Englobe toutes les question relatives à l'Europe",
+	"M" : ["https://www.economie.gouv.fr/files/styles/image_contenu_article_espace/public/files/directions_services/cedef/images_fichespratiques/europe.jpg?itok=9BHFzoKi","https://learnwebcode.github.io/json-example/images/cat-1.jpg"]
 }
